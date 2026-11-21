@@ -168,6 +168,19 @@
     font-weight: var(--ss-display-weight, 700);
     letter-spacing: var(--ss-display-tracking, -0.02em);
   }
+  /* A slightly tighter rhythm than Typography's (prose-lg: line height 1.78, 1.33em between paragraphs). No child selectors:
+     in Studio's editor the rich text sits in an extra <div> */
+  line-height: 1.65;
+  & :where(p):not(:where(.not-prose *)) {
+    margin-top: 1em;
+    margin-bottom: 1em;
+  }
+  & :where(p:first-child):not(:where(.not-prose *)) {
+    margin-top: 0;
+  }
+  & :where(p:last-child):not(:where(.not-prose *)) {
+    margin-bottom: 0;
+  }
 }
 
 /* ContentBox's paging (cb.quickPaging(): .pagingrow, .pagination) in the theme's look */
