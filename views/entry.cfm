@@ -4,6 +4,7 @@
 	ssImage = prc.entry.getFeaturedImageURL();
 	ssCategories = prc.entry.getCategories();
 </cfscript>
+<!--- The header matches blocks/_canvas/entry.cfm, which ContentBox Studio shows above the blocks while editing --->
 <cfoutput>
 #cb.event( "cbui_preEntryDisplay" )#
 <main id="main">

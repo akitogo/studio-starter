@@ -17,6 +17,7 @@ Status: test (six blocks, two presets, blog). Working name.
 | Blog | List as cards (featured image or a brand-colored panel with the category, date, categories, excerpt or meta description), category and search views, ContentBox's paging in the theme's look; post view with categories, featured image and the post's blocks or text |
 | Layout | Header with site name, main menu (ContentBox menu, plus Blog when the blog is on) and optional button; dark footer with the same links |
 | Classic content | Pages without blocks get a title and a reading column with Tailwind Typography |
+| Studio's editor | `blocks/_canvas/entry.cfm`: the header of a blog entry above its blocks while editing (same as on the post page); `blocks/editor.css`: the page background, font and text color in the editor canvas |
 
 Not yet: comments on posts (ContentBox's comment form comes with Bootstrap markup), a blog teaser block (blocks render
 when saved, so a list of the latest posts needs a ContentBox widget instead).
