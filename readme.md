@@ -4,15 +4,15 @@ A ContentBox 7 theme with ready-made blocks for [ContentBox Studio](https://gith
 built with Tailwind CSS from [HyperUI](https://www.hyperui.dev)'s marketing components. One set of blocks, several
 looks: a design preset switches colors, fonts and corners for the whole site.
 
-![Studio Starter with the Editorial preset: hero with image, navigation](screenshot.jpg)
+![Studio Starter with the Editorial preset: hero with image, navigation](https://raw.githubusercontent.com/akitogo/studio-starter/main/screenshot.jpg)
 
 Status: 0.1.0, the first version (five section blocks, two presets, blog), on
 [ForgeBox](https://forgebox.io/view/studio-starter).
 
 | Documentation | |
 |---|---|
-| [Blocks](docs/blocks.md) | Every block with a screenshot and its fields |
-| [Customizing](docs/customizing.md) | Presets (and making your own), tones, header and footer, theme settings, your own blocks |
+| [Blocks](https://github.com/akitogo/studio-starter/blob/main/docs/blocks.md) | Every block with a screenshot and its fields |
+| [Customizing](https://github.com/akitogo/studio-starter/blob/main/docs/customizing.md) | Presets (and making your own), tones, header and footer, theme settings, your own blocks |
 
 ## Requirements
 
@@ -38,7 +38,7 @@ git clone https://github.com/akitogo/studio-starter.git modules_app/contentbox-c
 Keep the folder name `studio-starter`: ContentBox stores the theme settings under it. Then, in ContentBox's admin:
 
 1. **Look & Feel → Themes**, **Rebuild Registry**, and activate **Studio Starter** for the site.
-2. Choose a **Design preset** in its settings (see [Customizing](docs/customizing.md#theme-settings)).
+2. Choose a **Design preset** in its settings (see [Customizing](https://github.com/akitogo/studio-starter/blob/main/docs/customizing.md#theme-settings)).
 3. If the site already has content made with Studio's Text and Heading blocks, re-render it once, so it uses the
    theme's versions of them (see [Build](#build)).
 
@@ -60,7 +60,7 @@ when saved, so a list of the latest posts needs a ContentBox widget instead).
 
 ## In Studio's editor
 
-![Studio Starter in ContentBox Studio: the page in the canvas looks like the site](docs/images/studio-editor.jpg)
+![Studio Starter in ContentBox Studio: the page in the canvas looks like the site](https://raw.githubusercontent.com/akitogo/studio-starter/main/docs/images/studio-editor.jpg)
 
 The editor's canvas loads the theme's stylesheets, so blocks look as they do on the site. `blocks/editor.css` gives the
 canvas the page background, font and text color of the layout, and `blocks/_canvas/entry.cfm` shows a blog post's
@@ -104,4 +104,4 @@ Class names must appear complete in the templates for Tailwind to find them: map
 ## License
 
 Apache License 2.0, by Akitogo Internet and Media Applications GmbH. Third-party material (HyperUI, Heroicons,
-Tailwind CSS, fonts): see [THIRD-PARTY.md](THIRD-PARTY.md).
+Tailwind CSS, fonts): see [THIRD-PARTY.md](https://github.com/akitogo/studio-starter/blob/main/THIRD-PARTY.md).
