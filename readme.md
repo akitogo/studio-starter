@@ -6,7 +6,33 @@ looks: a design preset switches colors, fonts and corners for the whole site.
 
 ![Studio Starter with the Editorial preset: hero with image, navigation](screenshot.jpg)
 
-Status: test (six blocks, two presets, blog). Working name.
+Status: 0.1.0, not released yet (five section blocks, two presets, blog). Working name.
+
+| Documentation | |
+|---|---|
+| [Blocks](docs/blocks.md) | Every block with a screenshot and its fields |
+| [Customizing](docs/customizing.md) | Presets (and making your own), tones, header and footer, theme settings, your own blocks |
+
+## Requirements
+
+- ContentBox 7.
+- [ContentBox Studio](https://github.com/akitogo/contentbox-studio) to edit pages with the blocks. Without Studio the
+  theme still works as a ContentBox theme: content written in the classic editor appears in a reading column.
+- No Node.js on the server: the built CSS and the fonts are part of the theme.
+
+## Installation
+
+```bash
+git clone https://github.com/akitogo/studio-starter.git modules_app/contentbox-custom/_themes/studio-starter
+```
+
+(or unpack it there). Keep the folder name `studio-starter`: ContentBox stores the theme settings under it. Then, in
+ContentBox's admin:
+
+1. **Look & Feel → Themes**, **Rebuild Registry**, and activate **Studio Starter** for the site.
+2. Choose a **Design preset** in its settings (see [Customizing](docs/customizing.md#theme-settings)).
+3. If the site already has content made with Studio's Text and Heading blocks, re-render it once, so it uses the
+   theme's versions of them (see [Build](#build)).
 
 ## What is in it
 
@@ -23,6 +49,14 @@ Status: test (six blocks, two presets, blog). Working name.
 
 Not yet: comments on posts (ContentBox's comment form comes with Bootstrap markup), a blog teaser block (blocks render
 when saved, so a list of the latest posts needs a ContentBox widget instead).
+
+## In Studio's editor
+
+![Studio Starter in ContentBox Studio: the page in the canvas looks like the site](docs/images/studio-editor.jpg)
+
+The editor's canvas loads the theme's stylesheets, so blocks look as they do on the site. `blocks/editor.css` gives the
+canvas the page background, font and text color of the layout, and `blocks/_canvas/entry.cfm` shows a blog post's
+header above its blocks while editing.
 
 ## How the styling works
 
@@ -61,5 +95,5 @@ Class names must appear complete in the templates for Tailwind to find them: map
 
 ## License
 
-Apache License 2.0. Third-party material (HyperUI, Heroicons, Tailwind CSS, fonts): see
-[THIRD-PARTY.md](THIRD-PARTY.md).
+Apache License 2.0, by Akitogo Internet and Media Applications GmbH. Third-party material (HyperUI, Heroicons,
+Tailwind CSS, fonts): see [THIRD-PARTY.md](THIRD-PARTY.md).
