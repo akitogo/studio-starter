@@ -1,0 +1,23 @@
+/*
+ * Bold: warm off-white and near-black, a signal orange, a heavy grotesque for headings, nearly square corners.
+ * Raw values only; src/theme.css maps them to the tokens the blocks use (per tone: light, alt, dark, brand).
+ */
+:root {
+  --ss-paper: #f5f3ef;
+  --ss-paper-alt: #e8e4dc;
+  --ss-night: #121212;
+  --ss-night-alt: #1f1f1f;
+  --ss-ink: #121212;
+  --ss-ink-soft: #57534c;
+  --ss-snow: #f5f3ef;
+  --ss-snow-soft: #aaa59c;
+  --ss-brand: #ff5a1f;
+  --ss-brand-ink: #121212;
+
+  --ss-font-display: 'Bricolage Grotesque Variable', ui-sans-serif, system-ui, sans-serif;
+  --ss-font-body: 'Inter Variable', ui-sans-serif, system-ui, sans-serif;
+  --ss-display-weight: 800;
+  --ss-display-tracking: -0.035em;
+  --ss-display-leading: 0.95;
+  --ss-radius: 0.25rem;
+}

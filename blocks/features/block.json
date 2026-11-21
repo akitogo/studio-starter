@@ -1,0 +1,52 @@
+{
+	"label": "Features",
+	"description": "Heading with intro and a grid of features with icon, title and text (from HyperUI's feature grid \"Grid with content\")",
+	"icon": "columns",
+	"category": "sections",
+	"fields": [
+		{ "name": "eyebrow", "type": "text", "label": "Label above the heading", "maxLength": 60 },
+		{ "name": "title", "type": "text", "label": "Heading", "maxLength": 100 },
+		{ "name": "intro", "type": "textarea", "label": "Intro", "maxLength": 400 },
+		{
+			"name": "items",
+			"type": "list",
+			"label": "Features",
+			"maxItems": 12,
+			"fields": [
+				{
+					"name": "icon",
+					"type": "select",
+					"label": "Icon",
+					"default": "bolt",
+					"options": [
+						{ "value": "bolt", "label": "Lightning" },
+						{ "value": "lock", "label": "Lock" },
+						{ "value": "sliders", "label": "Sliders" },
+						{ "value": "none", "label": "No icon" }
+					]
+				},
+				{ "name": "title", "type": "text", "label": "Title", "required": true, "maxLength": 80 },
+				{ "name": "text", "type": "textarea", "label": "Text", "maxLength": 300 }
+			]
+		},
+		{
+			"name": "columns",
+			"type": "select",
+			"label": "Columns",
+			"default": "3",
+			"options": [ { "value": "2", "label": "2" }, { "value": "3", "label": "3" } ]
+		},
+		{
+			"name": "tone",
+			"type": "select",
+			"label": "Background",
+			"default": "light",
+			"options": [
+				{ "value": "light", "label": "Light" },
+				{ "value": "alt", "label": "Light, tinted" },
+				{ "value": "dark", "label": "Dark" },
+				{ "value": "brand", "label": "Brand color" }
+			]
+		}
+	]
+}

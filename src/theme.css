@@ -1,0 +1,171 @@
+/*
+ * Studio Starter: Tailwind CSS entry. `npm run build` compiles it to includes/css/theme.css.
+ *
+ * Templates use only the semantic tokens below (bg-surface, text-ink, text-muted, border-line, bg-brand, ...), never
+ * fixed colors. Their values come from the preset stylesheet the layout links (includes/css/presets/<preset>.css),
+ * so a preset changes the whole look without rebuilding. A section picks its tone with a class:
+ * tone-light, tone-alt, tone-dark or tone-brand set all tokens for everything inside it.
+ */
+@import 'tailwindcss' source(none);
+@source '../blocks';
+@source '../layouts';
+@source '../views';
+@plugin '@tailwindcss/typography';
+
+@theme {
+  --color-surface: var(--ss-paper, #ffffff);
+  --color-surface-alt: var(--ss-paper-alt, #f3f4f6);
+  --color-ink: var(--ss-ink, #111827);
+  --color-muted: var(--ss-ink-soft, #4b5563);
+  --color-line: color-mix(in oklab, var(--ss-ink, #111827) 14%, transparent);
+  --color-brand: var(--ss-brand, #4f46e5);
+  --color-brand-ink: var(--ss-brand-ink, #ffffff);
+
+  --font-display: var(--ss-font-display, ui-sans-serif, system-ui, sans-serif);
+  --font-body: var(--ss-font-body, ui-sans-serif, system-ui, sans-serif);
+  --default-font-family: var(--font-body);
+  --radius-box: var(--ss-radius, 0.5rem);
+}
+
+@layer base {
+  .tone-light,
+  .tone-alt {
+    --color-ink: var(--ss-ink);
+    --color-muted: var(--ss-ink-soft);
+    --color-line: color-mix(in oklab, var(--ss-ink) 14%, transparent);
+    --color-brand: var(--ss-brand);
+    --color-brand-ink: var(--ss-brand-ink);
+  }
+  .tone-light {
+    --color-surface: var(--ss-paper);
+    --color-surface-alt: var(--ss-paper-alt);
+  }
+  .tone-alt {
+    --color-surface: var(--ss-paper-alt);
+    --color-surface-alt: var(--ss-paper);
+  }
+  .tone-dark {
+    --color-surface: var(--ss-night);
+    --color-surface-alt: var(--ss-night-alt);
+    --color-ink: var(--ss-snow);
+    --color-muted: var(--ss-snow-soft);
+    --color-line: color-mix(in oklab, var(--ss-snow) 18%, transparent);
+    --color-brand: var(--ss-brand);
+    --color-brand-ink: var(--ss-brand-ink);
+  }
+  /* On the brand color, buttons and accents invert */
+  .tone-brand {
+    --color-surface: var(--ss-brand);
+    --color-surface-alt: color-mix(in oklab, var(--ss-brand) 86%, black);
+    --color-ink: var(--ss-brand-ink);
+    --color-muted: color-mix(in oklab, var(--ss-brand-ink) 78%, transparent);
+    --color-line: color-mix(in oklab, var(--ss-brand-ink) 24%, transparent);
+    --color-brand: var(--ss-brand-ink);
+    --color-brand-ink: var(--ss-brand);
+  }
+
+  html {
+    background-color: var(--ss-paper);
+    color: var(--ss-ink);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* Studio's core blocks (text, heading, image, quote, button, gallery) in a reading column */
+  :where(.cbs-text, .cbs-heading, .cbs-image, .cbs-gallery, .cbs-quote, .cbs-button) {
+    max-width: 48rem;
+    margin-inline: auto;
+    padding-inline: 1.5rem;
+  }
+  :where(.cbs-text, .cbs-heading) {
+    margin-block: 1.5rem;
+  }
+  :root {
+    --cbs-accent: var(--color-brand);
+  }
+}
+
+/* Headings in the preset's display face */
+@utility heading {
+  font-family: var(--font-display);
+  font-weight: var(--ss-display-weight, 700);
+  letter-spacing: var(--ss-display-tracking, -0.02em);
+  line-height: var(--ss-display-leading, 1.05);
+  text-wrap: balance;
+}
+
+/* Small label above a heading */
+@utility eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-ink);
+  &::before {
+    content: '';
+    width: 1.5rem;
+    height: 2px;
+    background: var(--color-brand);
+  }
+}
+
+@utility btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border: 1px solid transparent;
+  border-radius: var(--radius-box);
+  padding: 0.875rem 1.5rem;
+  font-weight: 600;
+  line-height: 1.25;
+  transition:
+    background-color 150ms,
+    color 150ms,
+    border-color 150ms;
+  &:focus-visible {
+    outline: 2px solid var(--color-brand);
+    outline-offset: 3px;
+  }
+}
+
+@utility btn-primary {
+  background-color: var(--color-brand);
+  color: var(--color-brand-ink);
+  &:hover {
+    background-color: color-mix(in oklab, var(--color-brand) 85%, var(--color-ink));
+  }
+}
+
+@utility btn-secondary {
+  border-color: var(--color-line);
+  color: var(--color-ink);
+  &:hover {
+    background-color: var(--color-surface-alt);
+  }
+}
+
+/* Rich text and classic content in the theme's colors and fonts */
+.prose {
+  --tw-prose-body: var(--color-muted);
+  --tw-prose-headings: var(--color-ink);
+  --tw-prose-lead: var(--color-muted);
+  --tw-prose-links: var(--color-ink);
+  --tw-prose-bold: var(--color-ink);
+  --tw-prose-counters: var(--color-muted);
+  --tw-prose-bullets: var(--color-brand);
+  --tw-prose-hr: var(--color-line);
+  --tw-prose-quotes: var(--color-ink);
+  --tw-prose-quote-borders: var(--color-brand);
+  --tw-prose-captions: var(--color-muted);
+  --tw-prose-code: var(--color-ink);
+  --tw-prose-th-borders: var(--color-line);
+  --tw-prose-td-borders: var(--color-line);
+  & :where(h1, h2, h3):not(:where(.not-prose *)) {
+    font-family: var(--font-display);
+    font-weight: var(--ss-display-weight, 700);
+    letter-spacing: var(--ss-display-tracking, -0.02em);
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "name": "contentbox-theme-studio-starter",
+  "private": true,
+  "description": "Build tooling of the Studio Starter theme: Tailwind CSS and self-hosted fonts",
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build-presets.mjs && tailwindcss -i src/theme.css -o includes/css/theme.css --minify",
+    "watch": "tailwindcss -i src/theme.css -o includes/css/theme.css --watch"
+  },
+  "devDependencies": {
+    "@fontsource-variable/bricolage-grotesque": "^5.3.0",
+    "@fontsource-variable/fraunces": "^5.3.0",
+    "@fontsource-variable/inter": "^5.3.0",
+    "@tailwindcss/cli": "^4.3.5",
+    "@tailwindcss/typography": "^0.5.20",
+    "tailwindcss": "^4.3.5"
+  }
+}

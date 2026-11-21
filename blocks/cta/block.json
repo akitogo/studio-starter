@@ -1,0 +1,25 @@
+{
+	"label": "Call to action",
+	"description": "Heading, text and a button, with an optional image on the right (from HyperUI's CTA \"Base with content and call to action on the left, image on the right\")",
+	"icon": "megaphone",
+	"category": "sections",
+	"fields": [
+		{ "name": "title", "type": "text", "label": "Heading", "required": true, "maxLength": 100 },
+		{ "name": "text", "type": "textarea", "label": "Text", "maxLength": 400 },
+		{ "name": "buttonLabel", "type": "text", "label": "Button", "maxLength": 40 },
+		{ "name": "buttonLink", "type": "link", "label": "Button link" },
+		{ "name": "image", "type": "image", "label": "Image", "help": "Optional; without one, the text is centered." },
+		{
+			"name": "tone",
+			"type": "select",
+			"label": "Background",
+			"default": "brand",
+			"options": [
+				{ "value": "light", "label": "Light" },
+				{ "value": "alt", "label": "Light, tinted" },
+				{ "value": "dark", "label": "Dark" },
+				{ "value": "brand", "label": "Brand color" }
+			]
+		}
+	]
+}

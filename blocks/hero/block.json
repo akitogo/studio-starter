@@ -1,0 +1,29 @@
+{
+	"label": "Hero",
+	"description": "Large opening section: heading, intro, two buttons and an optional image (from HyperUI's banner \"Left with image\")",
+	"icon": "home",
+	"category": "sections",
+	"contentTypes": [ "page" ],
+	"fields": [
+		{ "name": "eyebrow", "type": "text", "label": "Label above the heading", "maxLength": 60 },
+		{ "name": "title", "type": "textarea", "label": "Heading", "required": true, "maxLength": 140 },
+		{ "name": "lead", "type": "textarea", "label": "Intro", "maxLength": 400 },
+		{ "name": "primaryLabel", "type": "text", "label": "Main button", "maxLength": 40 },
+		{ "name": "primaryLink", "type": "link", "label": "Main button link" },
+		{ "name": "secondaryLabel", "type": "text", "label": "Second button", "maxLength": 40 },
+		{ "name": "secondaryLink", "type": "link", "label": "Second button link" },
+		{ "name": "image", "type": "image", "label": "Image", "help": "Optional; shown next to the text on wider screens. Portrait images work best." },
+		{
+			"name": "tone",
+			"type": "select",
+			"label": "Background",
+			"default": "light",
+			"options": [
+				{ "value": "light", "label": "Light" },
+				{ "value": "alt", "label": "Light, tinted" },
+				{ "value": "dark", "label": "Dark" },
+				{ "value": "brand", "label": "Brand color" }
+			]
+		}
+	]
+}

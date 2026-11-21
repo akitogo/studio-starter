@@ -1,0 +1,23 @@
+/*
+ * Editorial: paper white and deep green, a soft serif for headings, rounded corners.
+ * Raw values only; src/theme.css maps them to the tokens the blocks use (per tone: light, alt, dark, brand).
+ */
+:root {
+  --ss-paper: #fbf8f1;
+  --ss-paper-alt: #f0e9da;
+  --ss-night: #1c2621;
+  --ss-night-alt: #26332c;
+  --ss-ink: #1c211e;
+  --ss-ink-soft: #59615b;
+  --ss-snow: #fbf8f1;
+  --ss-snow-soft: #b5bdb4;
+  --ss-brand: #1f5c45;
+  --ss-brand-ink: #fbf8f1;
+
+  --ss-font-display: 'Fraunces Variable', ui-serif, Georgia, serif;
+  --ss-font-body: 'Inter Variable', ui-sans-serif, system-ui, sans-serif;
+  --ss-display-weight: 500;
+  --ss-display-tracking: -0.02em;
+  --ss-display-leading: 1.02;
+  --ss-radius: 0.875rem;
+}
