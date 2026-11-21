@@ -6,7 +6,8 @@ looks: a design preset switches colors, fonts and corners for the whole site.
 
 ![Studio Starter with the Editorial preset: hero with image, navigation](screenshot.jpg)
 
-Status: 0.1.0, not released yet (five section blocks, two presets, blog). Working name.
+Status: 0.1.0, the first version (five section blocks, two presets, blog), on
+[ForgeBox](https://forgebox.io/view/studio-starter).
 
 | Documentation | |
 |---|---|
@@ -22,12 +23,19 @@ Status: 0.1.0, not released yet (five section blocks, two presets, blog). Workin
 
 ## Installation
 
+In the root of the ContentBox site:
+
+```bash
+box install studio-starter
+```
+
+It goes to `modules_app/contentbox-custom/_themes/studio-starter`. Without CommandBox, clone or unpack it there:
+
 ```bash
 git clone https://github.com/akitogo/studio-starter.git modules_app/contentbox-custom/_themes/studio-starter
 ```
 
-(or unpack it there). Keep the folder name `studio-starter`: ContentBox stores the theme settings under it. Then, in
-ContentBox's admin:
+Keep the folder name `studio-starter`: ContentBox stores the theme settings under it. Then, in ContentBox's admin:
 
 1. **Look & Feel → Themes**, **Rebuild Registry**, and activate **Studio Starter** for the site.
 2. Choose a **Design preset** in its settings (see [Customizing](docs/customizing.md#theme-settings)).

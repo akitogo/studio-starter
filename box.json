@@ -1,0 +1,37 @@
+{
+    "name": "Studio Starter",
+    "slug": "studio-starter",
+    "version": "0.1.0",
+    "author": "Akitogo Internet and Media Applications GmbH",
+    "shortDescription": "ContentBox 7 theme with ready-made blocks for ContentBox Studio and switchable design presets (Tailwind CSS)",
+    "type": "contentbox-themes",
+    "keywords": [
+        "contentbox",
+        "contentbox-theme",
+        "contentbox-studio",
+        "tailwindcss",
+        "theme"
+    ],
+    "homepage": "https://github.com/akitogo/studio-starter",
+    "repository": {
+        "type": "git",
+        "URL": "https://github.com/akitogo/studio-starter"
+    },
+    "bugs": "https://github.com/akitogo/studio-starter/issues",
+    "license": [
+        {
+            "type": "Apache2",
+            "URL": "https://www.apache.org/licenses/LICENSE-2.0"
+        }
+    ],
+    "directory": "modules_app/contentbox-custom/_themes",
+    "packageDirectory": "studio-starter",
+    "createPackageDirectory": true,
+    "dependencies": {},
+    "ignore": [
+        "node_modules/**",
+        "docs/**",
+        ".DS_Store",
+        ".gitignore"
+    ]
+}
