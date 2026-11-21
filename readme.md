@@ -42,7 +42,8 @@ npm ci
 npm run build    # presets with fonts, then Tailwind (scans blocks/, layouts/, views/)
 ```
 
-Then re-render the content in Studio (`POST /cbstudio/api/blocks/rerender`, or save the pages), because block HTML
+The layout adds each stylesheet's modification time to its address (`theme.css?v=…`), so browsers load the new CSS at
+once. Then re-render the content in Studio (`POST /cbstudio/api/blocks/rerender`, or save the pages), because block HTML
 is rendered when content is saved.
 
 Class names must appear complete in the templates for Tailwind to find them: map values to full names

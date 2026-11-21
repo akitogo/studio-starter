@@ -1,5 +1,5 @@
 <cfscript>
-	// Header from HyperUI's header "Icon on the left, links in the middle and call to actions on the right" (MIT)
+	// Header from HyperUI's header "Icon on the left, links and call to actions on the right" (MIT)
 	ssMenu = cb.rootMenu( type = "data", levels = "1" );
 	if ( prc.oCurrentSite.getIsBlogEnabled() ) {
 		ssMenu.append( { "title" : "Blog", "link" : cb.linkBlog() } );
@@ -11,18 +11,19 @@
 <cfoutput>
 <header class="tone-light sticky top-0 z-40 border-b border-line bg-surface/90 backdrop-blur">
 	<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-		<div class="flex h-16 items-center justify-between gap-8">
+		<div class="flex h-16 items-center gap-8">
 			<a class="heading text-xl text-ink" href="#cb.linkHome()#">#encodeForHTML( cb.siteName() )#</a>
 
-			<nav aria-label="Main" class="hidden md:block">
-				<ul class="flex items-center gap-8 text-sm font-medium">
-					<cfloop array="#ssMenu#" index="ssItem">
-						<li><a class="text-muted transition hover:text-ink" href="#encodeForHTMLAttribute( ssItem.link )#">#encodeForHTML( ssItem.title )#</a></li>
-					</cfloop>
-				</ul>
-			</nav>
+			<!--- Menu and button on the right, aligned with the content's right edge, with or without a button --->
+			<div class="ml-auto flex items-center gap-8">
+				<nav aria-label="Main" class="hidden md:block">
+					<ul class="flex items-center gap-8 text-sm font-medium">
+						<cfloop array="#ssMenu#" index="ssItem">
+							<li><a class="text-muted transition hover:text-ink" href="#encodeForHTMLAttribute( ssItem.link )#">#encodeForHTML( ssItem.title )#</a></li>
+						</cfloop>
+					</ul>
+				</nav>
 
-			<div class="flex items-center gap-3">
 				<cfif ssHasButton>
 					<a class="btn btn-primary hidden px-4 py-2.5 text-sm sm:inline-flex" href="#encodeForHTMLAttribute( ssButtonLink )#">#encodeForHTML( ssButtonLabel )#</a>
 				</cfif>

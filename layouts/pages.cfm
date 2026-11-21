@@ -5,6 +5,11 @@
 		ssPreset = "bold";
 	}
 	ssTheme = cb.themeRoot() & "/includes/css";
+	// Stylesheet addresses with the file's modification time, so browsers load a changed file after a theme update
+	ssStyles = [ ssTheme & "/presets/" & ssPreset & ".css", ssTheme & "/theme.css" ].map( ( href ) => {
+		var file = expandPath( href );
+		return fileExists( file ) ? href & "?v=" & dateTimeFormat( getFileInfo( file ).lastModified, "yyyymmddHHnnss" ) : href;
+	} );
 </cfscript>
 <cfoutput><!doctype html>
 <html lang="#encodeForHTMLAttribute( cb.themeSetting( "language", "en" ) )#">
@@ -16,8 +21,8 @@
 	<meta name="generator" content="ContentBox">
 	#cb.getOpenGraphMeta()#
 	<!--- Preset first (design tokens and fonts), then the theme. Both are <link>s, so Studio's editor loads them too --->
-	<link rel="stylesheet" href="#ssTheme#/presets/#ssPreset#.css">
-	<link rel="stylesheet" href="#ssTheme#/theme.css">
+	<link rel="stylesheet" href="#ssStyles[ 1 ]#">
+	<link rel="stylesheet" href="#ssStyles[ 2 ]#">
 	#cb.event( "cbui_beforeHeadEnd" )#
 </head>
 <body class="bg-surface font-body text-ink">
