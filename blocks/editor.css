@@ -1,0 +1,10 @@
+/*
+ * Studio Starter in ContentBox Studio's editor canvas only (loaded after the theme's stylesheets): the page background,
+ * font and text color that the layout's <body> has on the site. Plain CSS (not built by Tailwind): only the theme's
+ * CSS variables are used.
+ */
+body {
+  background-color: var(--color-surface);
+  color: var(--color-ink);
+  font-family: var(--font-body);
+}
