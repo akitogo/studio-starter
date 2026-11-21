@@ -14,9 +14,9 @@ component {
 	this.name         = "Studio Starter";
 	this.description   = "Ready-made blocks for ContentBox Studio with switchable design presets (Tailwind CSS)";
 	this.version       = "0.1.0";
-	this.author        = "akitogo Internet and Media Applications GmbH";
+	this.author        = "Akitogo Internet and Media Applications GmbH";
 	this.authorURL     = "https://github.com/akitogo";
-	this.screenShotURL = "";
+	this.screenShotURL = "screenshot.jpg";
 
 	// No setting is "required": ContentBox 7 checks required theme settings under their plain names, but the admin
 	// posts them as cb_theme_<theme>_<name>, so their form could never be saved. The layout falls back to defaults.

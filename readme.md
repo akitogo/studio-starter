@@ -4,6 +4,8 @@ A ContentBox 7 theme with ready-made blocks for [ContentBox Studio](https://gith
 built with Tailwind CSS from [HyperUI](https://www.hyperui.dev)'s marketing components. One set of blocks, several
 looks: a design preset switches colors, fonts and corners for the whole site.
 
+![Studio Starter with the Editorial preset: hero with image, navigation](screenshot.jpg)
+
 Status: test (six blocks, two presets, blog). Working name.
 
 ## What is in it
