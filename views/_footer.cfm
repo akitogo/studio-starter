@@ -1,5 +1,8 @@
 <cfscript>
 	ssFooterMenu = cb.rootMenu( type = "data", levels = "1" );
+	if ( prc.oCurrentSite.getIsBlogEnabled() ) {
+		ssFooterMenu.append( { "title" : "Blog", "link" : cb.linkBlog() } );
+	}
 </cfscript>
 <cfoutput>
 <footer class="tone-dark bg-surface text-ink">

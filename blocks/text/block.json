@@ -1,0 +1,9 @@
+{
+	"label": "Text",
+	"description": "Paragraphs, lists, links and emphasis.",
+	"icon": "text",
+	"category": "text",
+	"fields": [
+		{ "name": "content", "type": "richtext", "label": "Text", "required": true }
+	]
+}

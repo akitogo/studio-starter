@@ -4,17 +4,22 @@ A ContentBox 7 theme with ready-made blocks for [ContentBox Studio](https://gith
 built with Tailwind CSS from [HyperUI](https://www.hyperui.dev)'s marketing components. One set of blocks, several
 looks: a design preset switches colors, fonts and corners for the whole site.
 
-Status: first test (three blocks, two presets). Working name.
+Status: test (six blocks, two presets, blog). Working name.
 
 ## What is in it
 
 | Part | |
 |---|---|
-| Blocks (`blocks/`) | **Hero** (heading, intro, two buttons, optional image), **Features** (grid with icon, title, text), **Call to action** (heading, text, button, optional image) |
-| Tones | Every block has a background: light, light tinted, dark or brand color. Everything inside (text, lines, buttons) follows |
-| Presets | **Bold** (grotesque headings, signal orange, square corners) and **Editorial** (serif headings, deep green, rounded corners); theme setting *Design preset* |
-| Layout | Header with site name, main menu (ContentBox menu) and optional button; dark footer; blog, search and error views |
+| Section blocks (`blocks/`) | **Hero** (heading, intro, two buttons, optional image), **Content with image** (rich text, button, image side by side in three widths or below the text), **Features** (grid with icon, title, text), **Pricing** (up to four plans with price, features, button; one highlighted), **Call to action** (heading, text, button, optional image) |
+| Core blocks | **Text** and **Heading** replace Studio's core blocks of the same name (same fields, so existing content keeps working) with the theme's typography in a reading column |
+| Tones | Every section block has a background: light, light tinted, dark or brand color. Everything inside (text, lines, buttons) follows |
+| Presets | **Bold** (grotesque headings, signal orange, square corners) and **Editorial** (serif headings, deep green, rounded corners); theme setting *Design preset*. A preset has its own brand color for dark sections, so accents stay visible there |
+| Blog | List as cards (featured image or a brand-colored panel with the category, date, categories, excerpt or meta description), category and search views, ContentBox's paging in the theme's look; post view with categories, featured image and the post's blocks or text |
+| Layout | Header with site name, main menu (ContentBox menu, plus Blog when the blog is on) and optional button; dark footer with the same links |
 | Classic content | Pages without blocks get a title and a reading column with Tailwind Typography |
+
+Not yet: comments on posts (ContentBox's comment form comes with Bootstrap markup), a blog teaser block (blocks render
+when saved, so a list of the latest posts needs a ContentBox widget instead).
 
 ## How the styling works
 

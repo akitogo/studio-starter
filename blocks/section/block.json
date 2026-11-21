@@ -1,0 +1,46 @@
+{
+	"label": "Content with image",
+	"description": "Heading, rich text, an optional button and an image, side by side or stacked (from HyperUI's marketing sections)",
+	"icon": "image",
+	"category": "sections",
+	"fields": [
+		{ "name": "eyebrow", "type": "text", "label": "Label above the heading", "maxLength": 60 },
+		{ "name": "title", "type": "text", "label": "Heading", "maxLength": 120 },
+		{ "name": "text", "type": "richtext", "label": "Text" },
+		{ "name": "buttonLabel", "type": "text", "label": "Button", "maxLength": 40 },
+		{ "name": "buttonLink", "type": "link", "label": "Button link" },
+		{ "name": "image", "type": "image", "label": "Image" },
+		{
+			"name": "layout",
+			"type": "select",
+			"label": "Layout",
+			"default": "half",
+			"options": [
+				{ "value": "half", "label": "Text and image, same width" },
+				{ "value": "largeImage", "label": "Large image, narrow text" },
+				{ "value": "largeText", "label": "Large text, narrow image" },
+				{ "value": "stacked", "label": "Image below the text" }
+			]
+		},
+		{
+			"name": "imageSide",
+			"type": "select",
+			"label": "Image",
+			"default": "right",
+			"options": [ { "value": "right", "label": "Right" }, { "value": "left", "label": "Left" } ],
+			"when": { "layout": [ "half", "largeImage", "largeText" ] }
+		},
+		{
+			"name": "tone",
+			"type": "select",
+			"label": "Background",
+			"default": "light",
+			"options": [
+				{ "value": "light", "label": "Light" },
+				{ "value": "alt", "label": "Light, tinted" },
+				{ "value": "dark", "label": "Dark" },
+				{ "value": "brand", "label": "Brand color" }
+			]
+		}
+	]
+}

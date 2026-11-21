@@ -13,6 +13,9 @@
   --ss-snow-soft: #b5bdb4;
   --ss-brand: #1f5c45;
   --ss-brand-ink: #fbf8f1;
+  /* Brand color on dark sections (enough contrast against --ss-night) */
+  --ss-brand-dark: #8fd3b1;
+  --ss-brand-dark-ink: #1c2621;
 
   --ss-font-display: 'Fraunces Variable', ui-serif, Georgia, serif;
   --ss-font-body: 'Inter Variable', ui-sans-serif, system-ui, sans-serif;

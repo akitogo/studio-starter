@@ -1,0 +1,19 @@
+{
+	"label": "Heading",
+	"icon": "heading",
+	"category": "text",
+	"fields": [
+		{ "name": "text", "type": "text", "label": "Text", "required": true, "maxLength": 200 },
+		{
+			"name": "level",
+			"type": "select",
+			"label": "Level",
+			"default": "2",
+			"options": [
+				{ "value": "2", "label": "Heading 2" },
+				{ "value": "3", "label": "Heading 3" },
+				{ "value": "4", "label": "Heading 4" }
+			]
+		}
+	]
+}

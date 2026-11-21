@@ -13,6 +13,9 @@
   --ss-snow-soft: #aaa59c;
   --ss-brand: #ff5a1f;
   --ss-brand-ink: #121212;
+  /* Brand color on dark sections (enough contrast against --ss-night) */
+  --ss-brand-dark: #ff5a1f;
+  --ss-brand-dark-ink: #121212;
 
   --ss-font-display: 'Bricolage Grotesque Variable', ui-sans-serif, system-ui, sans-serif;
   --ss-font-body: 'Inter Variable', ui-sans-serif, system-ui, sans-serif;

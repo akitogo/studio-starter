@@ -44,6 +44,15 @@ component {
 			fieldDescription : "Language code of the site's pages (html lang), e.g. en or de"
 		},
 		{
+			name             : "blogTitle",
+			group            : "Blog",
+			defaultValue     : "Latest posts",
+			type             : "text",
+			label            : "Heading of the blog:",
+			required         : "false",
+			fieldDescription : "Shown above the list of posts"
+		},
+		{
 			name             : "headerButtonLabel",
 			group            : "Header",
 			defaultValue     : "",
